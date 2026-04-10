@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="CotizadorFinancieroAPF.Vistas.PaginaMaestra" %>
+<%@ Register Src="~/Vistas/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <title>Sistema Cotizador Financiero</title>
+    <link href="~/Estilos/CotizadorEstilos.css" rel="stylesheet" type="text/css" />
+    
+    <%-- Permite que las páginas hijas inyecten CSS o scripts propios --%>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="form-card">
+
+            <!-- HEADER -->
+            <div class="form-header">
+                <div class="d-flex align-items-center">
+
+                    <img src="../Images/LogoCotizadorAPF.png"
+                        style="width:80px; height:80px; margin-right:12px;" />
+                
+                    <div>
+                        <h5 class="mb-0 fw-bold">Sistema Cotizador Financiero APF</h5>
+                        <small class="text-muted">Plataforma de gestión financiera</small>
+                    </div>
+                
+                </div>
+
+                <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+            </div>
+
+            <!-- BODY -->
+            <div class="form-body">
+
+                <div style="display:flex; gap:20px;">
+
+                    <!-- MENU -->
+                    <div style="width:220px;">
+                        <uc1:Menu ID="Menu1" runat="server" />
+                    </div>
+
+                    <!-- CONTENIDO -->
+                    <div style="flex:1;">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="form-footer">
+                Sistema APF 
+            </div>
+
+        </div>
+
+    </form> 
+
+    <script>
+    var tiempoInactividad = 2 * 60 * 1000; // 2 minutos
+    var timeout;
+
+    function resetTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(cerrarSesion, tiempoInactividad);
+    }
+
+    function cerrarSesion() {
+        alert("Sesión expirada por inactividad");
+        window.location.href = "/Vistas/LoginForm.aspx";
+    }
+
+    // Detectar actividad
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+</script><script>
+    var tiempoInactividad = 2 * 60 * 1000; // 2 minutos
+    var timeout;
+
+    function resetTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(cerrarSesion, tiempoInactividad);
+    }
+
+    function cerrarSesion() {
+        alert("Sesión expirada por inactividad");
+        window.location.href = "/Vistas/LoginForm.aspx";
+    }
+
+    // Detectar actividad
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+</script>
+</body>
+</html>

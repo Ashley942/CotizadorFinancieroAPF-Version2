@@ -1,0 +1,148 @@
+﻿/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 230px;
+    background-color: #1f2d3d;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+
+/* MENU */
+
+.menuSidebar {
+    width: 100%;
+}
+
+    .menuSidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    /* ITEMS */
+
+    .menuSidebar a {
+        display: block;
+        padding: 12px 20px;
+        color: #ecf0f1;
+        text-decoration: none;
+        font-size: 15px;
+        transition: background 0.3s;
+    }
+
+
+        /* HOVER */
+
+        .menuSidebar a:hover {
+            background-color: #34495e;
+        }
+
+
+        /* ITEM ACTIVO */
+
+        .menuSidebar a.active {
+            background-color: #16a085;
+        }
+
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+    padding: 40px;
+    background-color: #f4f6f9;
+}
+
+
+/* FORMULARIO */
+
+.formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 6px;
+    width: 420px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+    /* INPUTS */
+
+    .formulario input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+    .botones input {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .botones input:hover {
+            background-color: #2980b9;
+        }
+
+.menu-separator {
+    display: flex;
+    align-items: center;
+    margin: 10px 16px 4px 16px;
+    gap: 8px;
+}
+
+    .menu-separator span {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #a0aec0;
+        white-space: nowrap;
+    }
+
+    .menu-separator::before,
+    .menu-separator::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: #2d3748;
+    }
+
+    .menu-separator:not(:has(span))::after {
+        display: none;
+    }

@@ -1,0 +1,271 @@
+﻿/* ============================================================
+   Cotizacion.css — Sistema APF (Master + Formularios)
+   Fuente: Times New Roman | Paleta: Blanco, Beige, Azul, Negro
+   ============================================================ */
+
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------- BASE ---------- */
+body {
+	font-family: 'Times New Roman', Times, serif;
+	background-color: #D8D8C0;
+	color: #000000;
+	min-height: 100vh;
+}
+
+/* ---------- LAYOUT PRINCIPAL ---------- */
+.form-card {
+	width: 100%;
+	max-width: 1200px;
+	margin: 30px auto;
+	background-color: #FFFFFF;
+	border: 1px solid #b5b5a0;
+	border-radius: 4px;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+	overflow: hidden;
+}
+
+/* ---------- HEADER ---------- */
+.form-header {
+	background-color: #1693A5;
+	color: #FFFFFF;
+	padding: 20px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	.form-header h1 {
+		font-size: 20px;
+		margin: 0;
+	}
+
+	.form-header p {
+		font-size: 13px;
+		opacity: 0.9;
+	}
+
+/* ---------- BODY (MENU + CONTENIDO) ---------- */
+.form-body {
+	padding: 25px 30px;
+}
+
+/* Contenedor flex */
+.layout-flex {
+	display: flex;
+	gap: 20px;
+}
+
+/* ---------- SIDEBAR / MENU ---------- */
+.sidebar-menu {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+	/* Cada item del menú */
+	.sidebar-menu li {
+		margin-bottom: 8px;
+	}
+
+	/* Estilos para los LinkButton (renderizados como <a>) */
+	.sidebar-menu .nav-link {
+		display: flex; /* Flex para alinear icono y texto */
+		align-items: center; /* Centrar verticalmente */
+		gap: 10px; /* Espacio entre icono y texto */
+		padding: 10px 15px;
+		color: white !important;
+		background-color: transparent;
+		border-radius: 8px;
+		text-decoration: none !important;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 16px;
+		transition: background-color 0.25s ease, color 0.25s ease;
+	}
+
+		/* Hover para que resalte */
+		.sidebar-menu .nav-link:hover {
+			background-color: rgba(13, 110, 253, 0.25);
+			color: white !important;
+			text-decoration: none !important;
+			cursor: pointer;
+			transform: translateX(6px);
+		}
+
+	/* Para el botón cerrar sesión que tiene clase btn-danger */
+	.sidebar-menu .btn-danger {
+		display: block;
+		width: 100%;
+		padding: 10px 0;
+		text-align: center;
+		font-weight: bold;
+		border-radius: 8px;
+		margin-top: 20px;
+	}
+
+	/* Opcional: que los emojis se vean con tamaño consistente */
+	.sidebar-menu .nav-link > span.icon,
+	.sidebar-menu .nav-link > i {
+		font-size: 20px;
+		line-height: 1;
+	}
+
+/* ---------- CONTENIDO ---------- */
+.content-area {
+	flex: 1;
+}
+
+/* ---------- SECCIONES ---------- */
+.form-section {
+	margin-bottom: 30px;
+}
+
+.section-title {
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #1693A5;
+	border-bottom: 2px solid #1693A5;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+/* ---------- FILAS ---------- */
+.field-row {
+	display: grid;
+	grid-template-columns: 210px 1fr;
+	gap: 12px;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+/* ---------- LABELS ---------- */
+.field-label {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+}
+
+	.field-label.required::after {
+		content: " *";
+		color: #c0392b;
+	}
+
+/* ---------- INPUTS ---------- */
+.form-control {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 14px;
+	border: 1px solid #9a9a85;
+	border-radius: 3px;
+	padding: 7px 10px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+	.form-control:focus {
+		border-color: #1693A5;
+		box-shadow: 0 0 0 3px rgba(22, 147, 165, 0.18);
+		outline: none;
+	}
+
+/* ---------- RESULTADOS ---------- */
+.results-section {
+	background-color: #f5f5ee;
+	border: 1px solid #c8c8b0;
+	border-radius: 4px;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.result-row {
+	display: grid;
+	grid-template-columns: 210px 1fr;
+	gap: 12px;
+	margin-bottom: 10px;
+}
+
+.result-value {
+	text-align: right;
+	font-weight: bold;
+	background-color: #e8e8dc;
+	padding: 7px 10px;
+	border: 1px solid #c0c0a8;
+}
+
+/* ---------- BOTONES ---------- */
+.btn-row {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.btn {
+	font-family: 'Times New Roman', Times, serif;
+	padding: 8px 20px;
+	font-weight: bold;
+	border-radius: 3px;
+	cursor: pointer;
+	border: none;
+}
+
+/* Botón principal */
+.btn-primary {
+	background-color: #1693A5;
+	color: white;
+}
+
+	.btn-primary:hover {
+		background-color: #117a8a;
+	}
+
+/* Secundario */
+.btn-secondary {
+	background-color: white;
+	border: 1px solid #1693A5;
+	color: #1693A5;
+}
+
+/* Peligro */
+.btn-danger {
+	background-color: white;
+	border: 1px solid #c0392b;
+	color: #c0392b;
+}
+
+/* ---------- FOOTER ---------- */
+.form-footer {
+	background-color: #f0f0e6;
+	border-top: 1px solid #D8D8C0;
+	padding: 10px 30px;
+	font-size: 12px;
+	text-align: right;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+
+	.layout-flex {
+		flex-direction: column;
+	}
+
+	.sidebar {
+		width: 100%;
+	}
+
+	.field-row,
+	.result-row {
+		grid-template-columns: 1fr;
+	}
+
+	.field-label {
+		text-align: left;
+	}
+}
+

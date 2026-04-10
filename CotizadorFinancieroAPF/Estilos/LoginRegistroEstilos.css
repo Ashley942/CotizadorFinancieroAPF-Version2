@@ -1,0 +1,110 @@
+﻿/* ---------- BASE ---------- */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #D8D8C0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ---------- CONTENEDOR ---------- */
+.login-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #b5b5a0;
+    border-radius: 4px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    padding: 30px 35px;
+}
+
+    /* ---------- TÍTULO ---------- */
+    .login-container h2 {
+        text-align: center;
+        color: #1693A5;
+        margin-bottom: 25px;
+        border-bottom: 2px solid #1693A5;
+        padding-bottom: 8px;
+    }
+
+/* ---------- FORM GROUP ---------- */
+.form-group {
+    margin-bottom: 18px;
+}
+
+    /* ---------- LABEL ---------- */
+    .form-group label,
+    .form-group span {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+/* ---------- INPUT ---------- */
+.form-control {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #9a9a85;
+    border-radius: 3px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+    .form-control:focus {
+        border-color: #1693A5;
+        box-shadow: 0 0 0 3px rgba(22,147,165,0.18);
+        outline: none;
+    }
+
+/* ---------- BOTONES ---------- */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Botón principal */
+.btn-primary {
+    background-color: #1693A5;
+    color: #FFFFFF;
+}
+
+    .btn-primary:hover {
+        background-color: #117a8a;
+    }
+
+/* Link tipo botón */
+a {
+    color: #1693A5;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* ---------- MENSAJES ---------- */
+.error-message {
+    color: #c0392b;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+}
