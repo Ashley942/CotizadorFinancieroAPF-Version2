@@ -5,4 +5,4 @@ Por hacer:
  
 - Crear pdf de la cotizacion 
 
-- Ampliar side bar con sus respectivas opciones: clientes, usuarios, catalogos...
+- Ampliar side bar con sus respectivas opciones: clientes, usuarios, catalogos... (listos)
